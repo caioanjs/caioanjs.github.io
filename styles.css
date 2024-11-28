@@ -95,11 +95,12 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Emote do 7TV */
-.emote
-    width: 32px; /* Largura fixa */
-    height: 32px; /* Altura proporcional */
-}
+/* emote do 7tv */
+.emote {
+    width: 32px;  /* Tamanho fixo de 32px para a largura */
+    height: 32px; /* Tamanho fixo de 32px para a altura */
+    vertical-align: middle; /* Alinha a imagem com o texto */
+    margin-right: 10px; /* Espaço entre a imagem e o texto */
 
 /* Responsiveness for Small Screens */
 @media (max-width: 600px) {
