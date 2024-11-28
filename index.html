@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bot Stats</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos do Bot</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Bot Stats</h1>
-    <div id="uptime">
-      <p>⏰ Uptime: <span id="uptime-text">Loading...</span></p>
-    </div>
-    <div id="channels">
-      <p>🔗 Connected to <span id="channels-count">Loading...</span> channels.</p>
-    </div>
+    <header>
+        <h1>Comandos do Bot</h1>
+        <p>Explore todos os comandos divertidos e úteis disponíveis para o nosso bot!</p>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Busque um comando..."
+            oninput="filterCommands()"
+        />
+    </header>
+    <main id="commandsContainer">
+        <section>
+            <h2>🎉 Interativos com Viewers</h2>
+            <div class="command">
+                <span class="command-name">!sorte</span>
+                <p class="command-desc">Receba uma frase motivacional ou horóscopo do dia.</p>
+            </div>
+            <div class="command">
+                <span class="command-name">!banfake [nome]</span>
+                <p class="command-desc">Brinque "banindo" alguém por um motivo aleatório.</p>
+            </div>
+        </section>
+        <section>
+            <h2>🧠 Engraçados</h2>
+            <div class="command">
+                <span class="command-name">!piada</span>
+                <p class="command-desc">Ouça a melhor (ou pior) piada do dia!</p>
+            </div>
+            <div class="command">
+                <span class="command-name">!pombo</span>
+                <p class="command-desc">Receba uma mensagem do pombo mensageiro! 🕊️</p>
+            </div>
+        </section>
+        <section>
+            <h2>🕹️ Baseados em Jogos</h2>
+            <div class="command">
+                <span class="command-name">!combo</span>
+                <p class="command-desc">Crie um combo lendário de habilidades.</p>
+            </div>
+            <div class="command">
+                <span class="command-name">!d20</span>
+                <p class="command-desc">Role um dado de 20 lados e veja seu resultado.</p>
+            </div>
+        </section>
+        <section>
+            <h2>❤️ Comunidade</h2>
+            <div class="command">
+                <span class="command-name">!abraço [nome]</span>
+                <p class="command-desc">Envie um abraço virtual para um usuário no chat.</p>
+            </div>
+            <div class="command">
+                <span class="command-name">!fome</span>
+                <p class="command-desc">Sugestões de comida para matar a fome. 🍔</p>
+            </div>
+        </section>
+        <p id="noResults" style="display: none;">Nenhum comando encontrado.</p>
+    </main>
     <footer>
-      <p>Bot powered by your code! 🤖</p>
+        <p>© 2024 Bot da Twitch - Todos os direitos reservados.</p>
     </footer>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
