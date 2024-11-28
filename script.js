@@ -1,11 +1,21 @@
-window.onload = function() {
-  // Simulate uptime and channels count data (in a real app, you can pull this data from an API or external source)
-  const botStats = {
-    uptime: "1 day, 2 hours, 30 minutes", // Example uptime
-    channels: 5 // Example number of channels
-  };
+// script.js
+function filterCommands() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const commands = document.querySelectorAll(".command");
+    const noResults = document.getElementById("noResults");
+    let hasResults = false;
 
-  // Update the DOM with the data
-  document.getElementById('uptime-text').textContent = botStats.uptime;
-  document.getElementById('channels-count').textContent = botStats.channels;
-};
+    commands.forEach(command => {
+        const commandName = command.querySelector(".command-name").textContent.toLowerCase();
+        const commandDesc = command.querySelector(".command-desc").textContent.toLowerCase();
+
+        if (commandName.includes(input) || commandDesc.includes(input)) {
+            command.style.display = "block";
+            hasResults = true;
+        } else {
+            command.style.display = "none";
+        }
+    });
+
+    noResults.style.display = hasResults ? "none" : "block";
+}
