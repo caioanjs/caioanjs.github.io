@@ -97,8 +97,8 @@ footer {
 
 /* Emote do 7TV */
 .emote
-    width: 300px; /* Largura fixa */
-    height: auto; /* Altura proporcional */
+    width: 32px; /* Largura fixa */
+    height: 32px; /* Altura proporcional */
 }
 
 /* Responsiveness for Small Screens */
