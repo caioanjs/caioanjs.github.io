@@ -6,7 +6,7 @@
     <title>AtmosferaBot</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://i.imgur.com/hoU8Bfh.png" type="image/png">
-     <style>
+    <style>
         /* Cor dos links normais */
         a {
             color: #6584b3; /* Azul */
@@ -15,13 +15,44 @@
 
         /* Cor dos links ao passar o mouse (hover) */
         a:hover {
-            color: #2960b3; /* Vermelho */
+            color: #2960b3; /* Azul escuro */
         }
 
         /* Cor dos links visitados */
         a:visited {
-            color: #1d4d96; /* Roxo */
+            color: #1d4d96; /* Azul mais escuro */
         }
+
+        /* Definindo uma cor de fundo e cor de texto para garantir contraste */
+        body {
+            background-color: #f4f4f4;  /* Cor de fundo mais clara */
+            color: #333;  /* Cor do texto */
+        }
+
+        /* Garantir que o footer e o header tenham uma cor adequada */
+        header, footer {
+            background-color: #2c3e50;  /* Cor de fundo escura */
+            color: #fff;  /* Cor do texto claro */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #2c3e50; /* Cor do título */
+        }
+
+        .command {
+            background-color: #ecf0f1; /* Cor de fundo para cada comando */
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .command-name {
+            font-weight: bold;
+            color: #3498db; /* Azul claro para o nome do comando */
+        }
+    </style>
 </head>
 <body>
     <header>
