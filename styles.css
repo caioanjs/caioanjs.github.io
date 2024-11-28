@@ -95,6 +95,12 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Emote do 7TV */
+.emote
+    width: 300px; /* Largura fixa */
+    height: auto; /* Altura proporcional */
+}
+
 /* Responsiveness for Small Screens */
 @media (max-width: 600px) {
     header h1 {
