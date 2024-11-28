@@ -13,7 +13,7 @@ body {
 header {
     text-align: center;
     padding: 2rem;
-    background-color: #4CAF50;
+    background-color: #b4d4fb;
     color: white;
 }
 
@@ -32,7 +32,7 @@ header input {
     max-width: 500px;
     padding: 0.5rem;
     margin: 1rem auto;
-    border: 2px solid #4CAF50;
+    border: 2px solid #b4d4fb;
     border-radius: 5px;
     font-size: 1rem;
     display: block;
@@ -55,9 +55,9 @@ section {
 
 section h2 {
     font-size: 1.8rem;
-    color: #4CAF50;
+    color: #b4d4fb;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #4CAF50;
+    border-bottom: 2px solid #b4d4fb;
     padding-bottom: 0.5rem;
 }
 
