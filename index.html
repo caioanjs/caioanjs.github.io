@@ -42,6 +42,9 @@
             padding: 0;
             background-color: #6584b3;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Faz com que o corpo ocupe a altura total da tela */
         }
 
         /* Retângulo centralizado */
@@ -60,9 +63,10 @@
         }
 
         main {
-            max-width: 800px;
-            margin: auto;
-            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1; /* Permite que o main ocupe o espaço disponível, centralizando o conteúdo */
             text-align: center;
         }
 
@@ -83,6 +87,8 @@
         <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
     </div>
 
+    <!-- Main Content -->
+    <main>
         <!-- Retângulo centralizado -->
         <div class="rectangle">
             <p>Este é o retângulo centralizado!</p>
