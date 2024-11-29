@@ -33,11 +33,27 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: #333;
             font-size: 1.2rem;
             margin-right: 50px; /* Espaçamento à direita do quadrado */
+            padding: 10px; /* Adiciona um padding para evitar que a imagem toque as bordas */
+        }
+
+        /* Estilo da imagem */
+        .atmosfera {
+            width: 120px; /* Tamanho reduzido da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+            margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+        }
+
+        /* Texto abaixo da imagem */
+        .rectangle-left p {
+            font-weight: bold; /* Negrito no texto */
+            font-size: 1.2rem; /* Tamanho do texto */
+            color: #333; /* Cor do texto */
         }
 
         /* Links à direita */
@@ -63,11 +79,6 @@
             transition: background-color 0.3s ease;
         }
 
-        .atmosfera {
-            width: 150px;
-            height: 150px;
-        }
-        
         .link-item:hover {
             background-color: #3b5b8a;
         }
@@ -77,7 +88,7 @@
     <div class="container">
         <!-- Quadrado à esquerda -->
         <div class="rectangle-left">
-            <img src="https://f.feridinha.com/FfsPe.png" class="atmosfera">
+            <img src="https://f.feridinha.com/FfsPe.png" class="atmosfera" alt="AtmosferaBot">
             <p>AtmosferaBot</p>
         </div>
 
