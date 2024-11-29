@@ -3,82 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AtmosferaBot</title>
+    <title>Quadrado Centralizado</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://i.imgur.com/hoU8Bfh.png" type="image/png">
+    <link rel="icon" href="https://f.feridinha.com/FfsPe.png" type="image/png">
     <style>
-        /* General Link Styles */
-        a {
-            color: #6584b3; /* Blue */
-            text-decoration: none; /* Remove underline */
-        }
-        a:hover {
-            color: #2960b3; /* Dark Blue */
-        }
-
-        /* Top Bar Styles */
+        /* Barra superior */
         .top-bar {
             background-color: #333;
             padding: 20px;
             text-align: center;
             color: white;
         }
+
         .top-link {
             color: white;
             cursor: pointer;
             padding: 10px 15px;
             font-size: 1.2rem;
+            display: inline-block;
         }
+
         .top-link:hover {
             background-color: rgba(101, 132, 179, 0.2);
             border-radius: 5px;
         }
 
-        /* Body and Background */
+        /* Fundo e centralização */
         body {
             margin: 0;
             padding: 0;
             background-color: #6584b3;
             font-family: Arial, sans-serif;
             display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensures the content takes full height */
-        }
-
-        /* Main Content Area for Centering */
-        main {
-            display: flex;
             justify-content: center;
             align-items: center;
-            flex-grow: 1; /* Makes the main area expand */
-            text-align: center;
+            min-height: 100vh; /* Garante a ocupação total da tela */
         }
 
-        /* Central Rectangle */
+        /* Quadrado centralizado */
         .rectangle {
             width: 300px;
             height: 150px;
             background-color: white;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra leve */
             display: flex;
             justify-content: center;
             align-items: center;
             color: #333;
             font-size: 1.2rem;
         }
-
-        /* Footer Styles */
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-        }
     </style>
 </head>
 <body>
-    <!-- Top Bar -->
+    <!-- Barra superior -->
     <div class="top-bar">
         <span class="top-link" onclick="window.location.href='https://caioanjs.github.io'">Home</span>
         <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
@@ -86,17 +64,9 @@
         <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
     </div>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Centralized Rectangle -->
-        <div class="rectangle">
-            <p>Este é o retângulo centralizado!</p>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" target="_blank">anjosMP3</a></p>
-    </footer>
+    <!-- Quadrado centralizado -->
+    <div class="rectangle">
+        <p>Este é o quadrado centralizado!</p>
+    </div>
 </body>
 </html>
