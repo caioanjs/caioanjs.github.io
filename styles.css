@@ -102,6 +102,38 @@ footer {
     vertical-align: middle; /* Alinha a imagem com o texto */
     margin-right: 10px; /* Espaço entre a imagem e o texto */
 
+/* Blue Section - Bottom part */
+.blue-section {
+    background-color: #6584b3; /* Blue background color */
+    color: #FFFFFF; /* White text */
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px; /* Adds spacing from the content above */
+}
+
+.blue-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blue-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.blue-section .action-button {
+    background-color: #FF5733; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.blue-section .action-button:hover {
+    background-color: #e74c3c; /* Button hover color */
+}
 /* Responsiveness for Small Screens */
 @media (max-width: 600px) {
     header h1 {
