@@ -54,6 +54,10 @@
             font-weight: bold;
         }
 
+        .main-menu {
+            align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -64,58 +68,14 @@
             <span class="top-link" onclick="window.location.href='sobre.html'">Sobre</span>
             <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
         </div>
-    <header>
-        <h1>AtmosferaBot</h1>
-        <p>Todos os comandos do bot.</p>
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Busque um comando..."
-            oninput="filterCommands()"
-        />
-    </header>
-    <main id="commandsContainer">
+    <main id="commandsContainer" class=>
          <section>
             <h2><img src="https://cdn.7tv.app/emote/01GS1DY2PR000EQ8WWYE0DETH6/4x.webp" class="emote"> Comandos Default</h2>
             <div class="command">
                 <span class="command-name">?join</span><b>(SÓ FUNCIONA NO CANAL DO <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a>)</b>
                 <p class="command-desc">Faça o bot entrar no seu canal da Twitch!</p>
             </div>
-            <div class="command">
-                <span class="command-name">?leave</span>
-                <p class="command-desc">Faça o bot sair do seu canal... (Lembre-se que pode mandar "?join" no canal do <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a> para chamar o bot de volta?)</p>
-            </div>
         </section>
-        <section>
-            <h2>🎉 Interativos com Viewers</h2>
-            <div class="command">
-                <span class="command-name">?oi</span>
-                <p class="command-desc">Receba uma oi especial do Atmosfera!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?adivinharnick</span>
-                <p class="command-desc">Com suas habilidades insanamente insanas de adivinhar, Atmosfera irá adivinhar seu nickname da Twitch!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?ship [nome1] [nome2]</span>
-                <p class="command-desc">Atmosfera, com suas grandes habilidades irá falar a compatibilidade de duas pessoas em um ship!</p>
-            </div>
-        </section>
-        <section>
-            <h2><img src="https://cdn.7tv.app/emote/01GS1DY2PR000EQ8WWYE0DETH6/4x.webp" class="emote"> Comandos personalizados</h2>
-            <div class="command">
-                <span class="command-name">?addcomando [comando] [resposta]</span>
-                <p class="command-desc">Adicione um comando personalizado no seu canal!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?removercomando [comando] </span>
-                <p class="command-desc">Remova um comando existente.</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?comandos</span>
-                <p class="command-desc">Veja a lista de comandos do bot e do seu canal.</p>
-            </div>
-        <p id="noResults" class="top-link" style="display: none;">Nenhum comando encontrado.</p>
     </main>
     <footer>
         <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" target="_blank">anjosMP3</a></p>
