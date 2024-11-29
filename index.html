@@ -44,7 +44,16 @@
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Faz com que o corpo ocupe a altura total da tela */
+            min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura */
+        }
+
+        /* Centralização vertical e horizontal */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1; /* Faz o main ocupar o espaço disponível */
+            text-align: center;
         }
 
         /* Retângulo centralizado */
@@ -52,22 +61,13 @@
             width: 300px; /* Largura do retângulo */
             height: 150px; /* Altura do retângulo */
             background-color: white; /* Cor de fundo do retângulo */
-            border-radius: 8px; /* Bordas arredondadas (opcional) */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+            border-radius: 8px; /* Bordas arredondadas */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
             display: flex;
             justify-content: center;
             align-items: center;
             color: #333; /* Cor do texto */
             font-size: 1.2rem; /* Tamanho do texto */
-            margin: 2rem auto; /* Centraliza horizontalmente */
-        }
-
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-grow: 1; /* Permite que o main ocupe o espaço disponível, centralizando o conteúdo */
-            text-align: center;
         }
 
         footer {
