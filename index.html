@@ -13,9 +13,16 @@
             background-color: #6584b3;
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: space-between; /* Espaço entre os elementos left e right */
-            align-items: center;
+            justify-content: center; /* Centraliza na horizontal */
+            align-items: center; /* Centraliza na vertical */
             min-height: 100vh;
+        }
+
+        /* Contêiner principal */
+        .container {
+            display: flex;
+            justify-content: space-between; /* Espaço entre os dois elementos */
+            align-items: center;
         }
 
         /* Quadrado à esquerda */
@@ -30,15 +37,14 @@
             align-items: center;
             color: #333;
             font-size: 1.2rem;
-            margin-left: 50px; /* Espaçamento do lado esquerdo */
+            margin-right: 50px; /* Espaçamento à direita do quadrado */
         }
 
-        /* Barra de links à direita */
+        /* Links à direita */
         .links-container {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            margin-right: 50px; /* Espaçamento do lado direito */
         }
 
         .link-item {
@@ -63,17 +69,19 @@
     </style>
 </head>
 <body>
-    <!-- Quadrado à esquerda -->
-    <div class="rectangle-left">
-        <p>Conteúdo à esquerda</p>
-    </div>
+    <div class="container">
+        <!-- Quadrado à esquerda -->
+        <div class="rectangle-left">
+            <p>Conteúdo à esquerda</p>
+        </div>
 
-    <!-- Links à direita -->
-    <div class="links-container">
-        <a href="https://caioanjs.github.io" class="link-item">Home</a>
-        <a href="comandos.html" class="link-item">Comandos</a>
-        <a href="sobre.html" class="link-item">Sobre</a>
-        <a href="contato.html" class="link-item">Contato</a>
+        <!-- Links à direita -->
+        <div class="links-container">
+            <a href="https://caioanjs.github.io" class="link-item">Home</a>
+            <a href="comandos.html" class="link-item">Comandos</a>
+            <a href="sobre.html" class="link-item">Sobre</a>
+            <a href="contato.html" class="link-item">Contato</a>
+        </div>
     </div>
 </body>
 </html>
