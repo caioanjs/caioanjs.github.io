@@ -7,15 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://f.feridinha.com/FfsPe.png" type="image/png">
     <style>
-        /* Configurações gerais */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #6584b3;
-            font-family: Arial, sans-serif;
-            display: flex;
-        }
-        
         /* Cor dos links */
         a {
             color: #6584b3;
@@ -110,8 +101,36 @@
     <div class="top-bar">
         <span class="top-link" onclick="window.location.href='https://caioanjs.github.io'">Home</span>
         <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
-        <span class="top-link" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0QfC6J9ZGWVriKLXSVFOGDqrWP_9SVqSA3totoxDQ84u0fg/viewform'">Sugestões</span>
+        <span class="top-link" onclick="window.location.href='sobre.html'">Sobre</span>
         <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
     </div>
 
+    <header>
+        <h1>AtmosferaBot</h1>
+        <p>Todos os comandos do bot.</p>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Busque um comando..."
+            oninput="filterCommands()"
+        />
+    </header>
 
+    <main id="commandsContainer">
+        <section>
+            <h2><img src="https://cdn.7tv.app/emote/01GS1DY2PR000EQ8WWYE0DETH6/4x.webp" class="emote" alt="Emoji"> Comandos padrões</h2>
+            <div class="command">
+                <span class="command-name">?join</span> <b>(SÓ FUNCIONA NO CANAL DO <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a>)</b>
+                <p class="command-desc">Faça o bot entrar no seu canal da Twitch!</p>
+            </div>
+            <div class="command">
+                <span class="command-name">?leave</span>
+                <p class="command-desc">Faça o bot sair do seu canal... (Lembre-se que pode mandar "?join" no canal do <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a> para chamar o bot de volta!)</p>
+            </div>
+        </section>
+    <footer>
+        <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank">anjosMP3</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
