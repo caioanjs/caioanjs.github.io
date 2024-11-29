@@ -3,97 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comandos - AtmosferaBot</title>
+    <title>AtmosferaBot</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://f.feridinha.com/FfsPe.png" type="image/png">
+    <link rel="icon" href="https://i.imgur.com/hoU8Bfh.png" type="image/png">
     <style>
-        /* Cor dos links */
+        /* General Link Styles */
         a {
-            color: #6584b3;
-            text-decoration: none;
+            color: #6584b3; /* Blue */
+            text-decoration: none; /* Remove underline */
         }
-
-        /* Hover nos links */
         a:hover {
-            color: #2960b3;
+            color: #2960b3; /* Dark blue */
         }
 
-        /* Links visitados */
-        a:visited {
-            color: #1d4d96;
-        }
-
-        /* Barra superior */
+        /* Top Bar Styles */
         .top-bar {
             background-color: #333;
             padding: 20px;
             text-align: center;
-            color: #fff;
+            color: white;
         }
-
         .top-link {
-            color: #fff;
+            color: white;
             cursor: pointer;
             padding: 10px 15px;
             font-size: 1.2rem;
-            display: inline-block;
         }
-
         .top-link:hover {
             background-color: rgba(101, 132, 179, 0.2);
             border-radius: 5px;
         }
 
-        /* Corpo principal */
-        main {
-            padding: 20px;
-        }
-
-        .command {
-            margin: 10px 0;
-        }
-
-        .command-name {
-            font-weight: bold;
-        }
-
-        /* Seção azul */
-        .blue-section {
+        /* Body and Background */
+        body {
+            margin: 0;
+            padding: 0;
             background-color: #6584b3;
-            color: #fff;
-            padding: 30px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the content takes full height */
+        }
+
+        /* Main Content Area */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1; /* Makes main expand to fill available space */
             text-align: center;
-            margin-top: 50px;
         }
 
-        .blue-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+        /* Central Rectangle */
+        .rectangle {
+            width: 90%; /* Responsive width */
+            max-width: 400px; /* Limit maximum size */
+            height: auto; /* Adjust height automatically */
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            color: #333; /* Text color */
+            font-size: 1.2rem; /* Font size */
         }
 
-        .blue-section p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .blue-section .action-button {
-            background-color: #203a61;
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
         }
-
-        .blue-section .action-button:hover {
-            background-color: #3b5b8a;
-        }
-
-        /* eu */
-        .anjosmp3 {
-    color: #828ebc !important;
-}
     </style>
 </head>
 <body>
@@ -105,72 +85,17 @@
         <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
     </div>
 
-    <header>
-        <h1>AtmosferaBot</h1>
-        <p>Todos os comandos do bot.</p>
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Busque um comando..."
-            oninput="filterCommands()"
-        />
-    </header>
-
-    <main id="commandsContainer">
-        <section>
-            <h2><img src="https://cdn.7tv.app/emote/01GS1DY2PR000EQ8WWYE0DETH6/4x.webp" class="emote" alt="Emoji"> Comandos padrões</h2>
-            <div class="command">
-                <span class="command-name">?join</span> <b>(SÓ FUNCIONA NO CANAL DO <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a>)</b>
-                <p class="command-desc">Faça o bot entrar no seu canal da Twitch!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?leave</span>
-                <p class="command-desc">Faça o bot sair do seu canal... (Lembre-se que pode mandar "?join" no canal do <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a> para chamar o bot de volta!)</p>
-            </div>
-        </section>
-        <section>
-            <h2><img src="https://cdn.7tv.app/emote/01G7QVTDS0000AFZYKYR8SSBGX/4x.webp" class="emote" alt="Emoji"> Interativos com Viewers</h2>
-            <div class="command">
-                <span class="command-name">?oi</span>
-                <p class="command-desc">Receba um oi especial do Atmosfera!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?adivinharnick</span>
-                <p class="command-desc">Atmosfera irá adivinhar seu nickname da Twitch!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?ship [nome1] [nome2]</span>
-                <p class="command-desc">Veja a compatibilidade de duas pessoas em um ship!</p>
-            </div>
-        </section>
-        <section>
-            <h2><img src="https://cdn.7tv.app/emote/01FBZESCNR000A6AWCB1X558GZ/4x.webp" class="emote" alt="Emoji"> Comandos personalizados</h2>
-            <div class="command">
-                <span class="command-name">?addcomando [comando] [resposta]</span>
-                <p class="command-desc">Adicione um comando personalizado no seu canal!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?removercomando [comando]</span>
-                <p class="command-desc">Remova um comando existente.</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?comandos</span>
-                <p class="command-desc">Veja a lista de comandos do bot e do seu canal.</p>
-            </div>
-            <p id="noResults" style="display: none;">Nenhum comando encontrado.</p>
-        </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Centralized Rectangle -->
+        <div class="rectangle">
+            <p>Este é o retângulo centralizado!</p>
+        </div>
     </main>
 
-    <!-- Seção com fundo azul -->
-    <div class="blue-section">
-        <h2>Tem uma ideia de comando?</h2>
-        <p>Se você tem uma ideia de comando e acha que seria legal implementarmos no AtmosferaBOT, mande no formulário abaixo!</p>
-        <button class="action-button" onclick="window.open('https://forms.gle/mfRsFWSPCM8voJMD7', '_blank')">Clique Aqui</button>
-    </div>
-
+    <!-- Footer -->
     <footer>
-        <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank">anjosMP3</a></p>
+        <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" target="_blank">anjosMP3</a></p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
