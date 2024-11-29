@@ -57,6 +57,38 @@
             font-weight: bold;
         }
 
+        /* Blue Section - Bottom part */
+.blue-section {
+    background-color: #6584b3; /* Blue background color */
+    color: #FFFFFF; /* White text */
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px; /* Adds spacing from the content above */
+}
+
+.blue-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blue-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.blue-section .action-button {
+    background-color: #FF5733; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.blue-section .action-button:hover {
+    background-color: #e74c3c; /* Button hover color */
+}
     </style>
 </head>
 <body>
@@ -119,16 +151,13 @@
                 <p class="command-desc">Veja a lista de comandos do bot e do seu canal.</p>
             </div>
         <p id="noResults" style="display: none;">Nenhum comando encontrado.</p>
-    <main id="commandsContainer">
-         <section>
-            <h2><img src="https://cdn.7tv.app/emote/01GS1DY2PR000EQ8WWYE0DETH6/4x.webp" class="emote"> Comandos padrões</h2>
-            <div class="command">
-                <span class="command-name">?join</span><b>(SÓ FUNCIONA NO CANAL DO <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a>)</b>
-                <p class="command-desc">Faça o bot entrar no seu canal da Twitch!</p>
-            </div>
-         </section>
-    </main>
      </main>
+        <!-- New Section with Blue Background -->
+    <div class="blue-section">
+        <h2>Texto da Seção Inferior</h2>
+        <p>Este é um exemplo de texto para a seção inferior. Aqui pode vir qualquer tipo de conteúdo, como informações ou mensagens importantes.</p>
+        <button class="action-button">Clique Aqui</button> <!-- Placeholder de botão -->
+    </div>
     <footer>
         <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank">anjosMP3</a></p>
     </footer>
