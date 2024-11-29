@@ -7,93 +7,111 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://f.feridinha.com/FfsPe.png" type="image/png">
     <style>
-        /* Cor dos links */
-        a {
-            color: #6584b3;
-            text-decoration: none;
-        }
+/* Cor dos links */
+a {
+    color: #6584b3;
+    text-decoration: none;
+}
 
-        /* Hover nos links */
-        a:hover {
-            color: #2960b3;
-        }
+/* Hover nos links */
+a:hover {
+    color: #2960b3;
+}
 
-        /* Links visitados */
-        a:visited {
-            color: #1d4d96;
-        }
+/* Links visitados */
+a:visited {
+    color: #1d4d96;
+}
 
-        /* Barra superior */
-        .top-bar {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
-        }
+/* Barra superior */
+.top-bar {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
 
-        .top-link {
-            color: #fff;
-            cursor: pointer;
-            padding: 10px 15px;
-            font-size: 1.2rem;
-            display: inline-block;
-        }
+.top-link {
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    display: inline-block;
+}
 
-        .top-link:hover {
-            background-color: rgba(101, 132, 179, 0.2);
-            border-radius: 5px;
-        }
+.top-link:hover {
+    background-color: rgba(101, 132, 179, 0.2);
+    border-radius: 5px;
+}
 
-        /* Corpo principal */
-        main {
-            padding: 20px;
-        }
+/* Corpo principal */
+body {
+    display: flex; /* Usando flexbox no corpo */
+    flex-direction: column; /* Os itens serão organizados na vertical */
+    min-height: 100vh; /* Faz com que o corpo ocupe toda a altura da janela */
+    margin: 0;
+}
 
-        .command {
-            margin: 10px 0;
-        }
+main {
+    padding: 20px;
+    flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+}
 
-        .command-name {
-            font-weight: bold;
-        }
+.command {
+    margin: 10px 0;
+}
 
-        /* Seção azul */
-        .blue-section {
-            background-color: #6584b3;
-            color: #fff;
-            padding: 30px;
-            text-align: center;
-            margin-top: 50px;
-        }
+.command-name {
+    font-weight: bold;
+}
 
-        .blue-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+/* Seção azul */
+.blue-section {
+    background-color: #6584b3;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
 
-        .blue-section p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
+.blue-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 
-        .blue-section .action-button {
-            background-color: #203a61;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
+.blue-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
 
-        .blue-section .action-button:hover {
-            background-color: #3b5b8a;
-        }
+.blue-section .action-button {
+    background-color: #203a61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
 
-        /* eu */
-        .anjosmp3 {
+.blue-section .action-button:hover {
+    background-color: #3b5b8a;
+}
+
+/* eu */
+.anjosmp3 {
     color: #828ebc !important;
 }
+
+/* Estilo do footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+}
+
     </style>
 </head>
 <body>
