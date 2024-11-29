@@ -22,64 +22,91 @@
         a:visited {
             color: #1d4d96; /* Azul mais escuro */
         }
-                /* Top Bar */
+
+        /* Top Bar */
         .top-bar {
             background-color: #333;
             padding: 20px;
             text-align: center;
             color: #FFFFFF;
         }
-            /* Cor dos links normais */
+
         .top-link {
             color: #FFFFFF;
             cursor: pointer; /* Indica que é interativo */
             padding: 10px 15px;
             font-size: 1.2rem;
         }
-                /* Cor dos links ao passar o mouse (hover) */
+
         .top-link:hover {
             color: #FFFFFF; /* Azul escuro */
             background-color: rgba(101, 132, 179, 0.2);
             border-radius: 5px;
-                /* Corpo principal e botões */
-        main {
-            padding: 20px;
         }
 
-        .command {
-            margin: 10px 0;
+        /* Corpo principal */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #6584b3; /* Cor de fundo */
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: calc(100vh - 60px); /* Ocupa o espaço restante abaixo da Top Bar */
+        }
+
+        .main-menu {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         .command-name {
             font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
-        .main-menu {
-            align: center;
+        footer {
+            background-color: #333;
+            text-align: center;
+            color: white;
+            padding: 10px 0;
+            position: relative;
         }
-
     </style>
 </head>
 <body>
-<!-- Top Bar -->
-     <div class="top-bar">
-            <span class="top-link" onclick="window.location.href='caioanjs.github.io'">Home</span>
-            <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
-            <span class="top-link" onclick="window.location.href='sobre.html'">Sobre</span>
-            <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <span class="top-link" onclick="window.location.href='caioanjs.github.io'">Home</span>
+        <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
+        <span class="top-link" onclick="window.location.href='sobre.html'">Sobre</span>
+        <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
+    </div>
+    
+    <main>
+        <div class="main-menu">
+            <section>
+                <h2><img src="https://cdn.7tv.app/emote/01GS1DY2PR000EQ8WWYE0DETH6/4x.webp" class="emote"> Comandos Default</h2>
+                <div class="command">
+                    <span class="command-name">?join</span>
+                    <b>(SÓ FUNCIONA NO CANAL DO <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a>)</b>
+                    <p class="command-desc">Faça o bot entrar no seu canal da Twitch!</p>
+                </div>
+            </section>
         </div>
-    <main id="commandsContainer" class="main-menu">
-         <section>
-            <h2><img src="https://cdn.7tv.app/emote/01GS1DY2PR000EQ8WWYE0DETH6/4x.webp" class="emote"> Comandos Default</h2>
-            <div class="command">
-                <span class="command-name">?join</span><b>(SÓ FUNCIONA NO CANAL DO <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a>)</b>
-                <p class="command-desc">Faça o bot entrar no seu canal da Twitch!</p>
-            </div>
-        </section>
     </main>
+    
     <footer>
         <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" target="_blank">anjosMP3</a></p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
