@@ -3,70 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quadrado Centralizado</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Layout Ajustado</title>
     <link rel="icon" href="https://f.feridinha.com/FfsPe.png" type="image/png">
     <style>
-        /* Barra superior */
-        .top-bar {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-
-        .top-link {
-            color: white;
-            cursor: pointer;
-            padding: 10px 15px;
-            font-size: 1.2rem;
-            display: inline-block;
-        }
-
-        .top-link:hover {
-            background-color: rgba(101, 132, 179, 0.2);
-            border-radius: 5px;
-        }
-
-        /* Fundo e centralização */
+        /* Configurações gerais */
         body {
             margin: 0;
             padding: 0;
             background-color: #6584b3;
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
+            justify-content: space-between; /* Espaço entre os elementos left e right */
             align-items: center;
-            min-height: 100vh; /* Garante a ocupação total da tela */
+            min-height: 100vh;
         }
 
-        /* Quadrado centralizado */
-        .rectangle {
+        /* Quadrado à esquerda */
+        .rectangle-left {
             width: 300px;
             height: 150px;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra leve */
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
             display: flex;
             justify-content: center;
             align-items: center;
             color: #333;
             font-size: 1.2rem;
+            margin-left: 50px; /* Espaçamento do lado esquerdo */
+        }
+
+        /* Barra de links à direita */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 50px; /* Espaçamento do lado direito */
+        }
+
+        .link-item {
+            background-color: #203a61;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            margin-bottom: 15px; /* Espaço entre os links */
+            border-radius: 12px; /* Bordas arredondadas */
+            text-align: center;
+            font-size: 1.2rem;
+            width: 200px; /* Largura fixa para os links */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .link-item:hover {
+            background-color: #3b5b8a;
         }
     </style>
 </head>
 <body>
-    <!-- Barra superior -->
-    <div class="top-bar">
-        <span class="top-link" onclick="window.location.href='https://caioanjs.github.io'">Home</span>
-        <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
-        <span class="top-link" onclick="window.location.href='sobre.html'">Sobre</span>
-        <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
+    <!-- Quadrado à esquerda -->
+    <div class="rectangle-left">
+        <p>Conteúdo à esquerda</p>
     </div>
 
-    <!-- Quadrado centralizado -->
-    <div class="rectangle">
-        <p>Este é o quadrado centralizado!</p>
+    <!-- Links à direita -->
+    <div class="links-container">
+        <a href="https://caioanjs.github.io" class="link-item">Home</a>
+        <a href="comandos.html" class="link-item">Comandos</a>
+        <a href="sobre.html" class="link-item">Sobre</a>
+        <a href="contato.html" class="link-item">Contato</a>
     </div>
 </body>
 </html>
