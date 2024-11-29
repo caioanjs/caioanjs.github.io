@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtmosferaBot</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://i.imgur.com/hoU8Bfh.png" type="image/png">
+    <style>
+        /* Cor dos links normais */
+        a {
+            color: #6584b3; /* Azul */
+            text-decoration: none; /* Remove o sublinhado padrão */
+        }
 
+        /* Cor dos links ao passar o mouse (hover) */
+        a:hover {
+            color: #2960b3; /* Azul escuro */
+        }
+        
+        /* Cor dos links visitados */
+        a:visited {
+            color: #1d4d96; /* Azul mais escuro */
+        }
+                /* Top Bar */
+        .top-bar {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+            /* Cor dos links normais */
+        .top-link {
+            color: #FFFFFF;
+            cursor: pointer; /* Indica que é interativo */
+            padding: 10px 15px;
+            font-size: 1.2rem;
+        }
+                /* Cor dos links ao passar o mouse (hover) */
+        .top-link:hover {
+            color: #FFFFFF; /* Azul escuro */
+            background-color: rgba(101, 132, 179, 0.2);
+            border-radius: 5px;
+                /* Corpo principal e botões */
+        main {
+            padding: 20px;
+        }
+
+        .command {
+            margin: 10px 0;
+        }
+
+        .command-name {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Top Bar -->
+     <div class="top-bar">
+            <span class="top-link" onclick="window.location.href='home.html'">Home</span>
+            <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
+            <span class="top-link" onclick="window.location.href='sobre.html'">Sobre</span>
+            <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
+        </div>
+    <header>
+        <h1>AtmosferaBot</h1>
+        <p>Todos os comandos do bot.</p>
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Busque um comando..."
+            oninput="filterCommands()"
+        />
+    </header>
+    <main id="commandsContainer">
+         <section>
+            <h2><img src="https://cdn.7tv.app/emote/01GS1DY2PR000EQ8WWYE0DETH6/4x.webp" class="emote"> Comandos Default</h2>
+            <div class="command">
+                <span class="command-name">?join</span><b>(SÓ FUNCIONA NO CANAL DO <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a>)</b>
+                <p class="command-desc">Faça o bot entrar no seu canal da Twitch!</p>
+            </div>
+            <div class="command">
+                <span class="command-name">?leave</span>
+                <p class="command-desc">Faça o bot sair do seu canal... (Lembre-se que pode mandar "?join" no canal do <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a> para chamar o bot de volta?)</p>
+            </div>
+        </section>
+        <section>
+            <h2>🎉 Interativos com Viewers</h2>
+            <div class="command">
+                <span class="command-name">?oi</span>
+                <p class="command-desc">Receba uma oi especial do Atmosfera!</p>
+            </div>
+            <div class="command">
+                <span class="command-name">?adivinharnick</span>
+                <p class="command-desc">Com suas habilidades insanamente insanas de adivinhar, Atmosfera irá adivinhar seu nickname da Twitch!</p>
+            </div>
+            <div class="command">
+                <span class="command-name">?ship [nome1] [nome2]</span>
+                <p class="command-desc">Atmosfera, com suas grandes habilidades irá falar a compatibilidade de duas pessoas em um ship!</p>
+            </div>
+        </section>
+        <section>
+            <h2><img src="https://cdn.7tv.app/emote/01GS1DY2PR000EQ8WWYE0DETH6/4x.webp" class="emote"> Comandos personalizados</h2>
+            <div class="command">
+                <span class="command-name">?addcomando [comando] [resposta]</span>
+                <p class="command-desc">Adicione um comando personalizado no seu canal!</p>
+            </div>
+            <div class="command">
+                <span class="command-name">?removercomando [comando] </span>
+                <p class="command-desc">Remova um comando existente.</p>
+            </div>
+            <div class="command">
+                <span class="command-name">?comandos</span>
+                <p class="command-desc">Veja a lista de comandos do bot e do seu canal.</p>
+            </div>
+        <p id="noResults" style="display: none;">Nenhum comando encontrado.</p>
+    </main>
+    <footer>
+        <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" target="_blank">anjosMP3</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
