@@ -38,6 +38,7 @@
             justify-content: center; /* Centraliza verticalmente */
             align-items: center; /* Centraliza horizontalmente */
             padding: 20px; /* Adiciona padding para afastar a imagem das bordas */
+            position: relative; /* Torna a div relativa, se necessário */
         }
 
         .atmosfera {
@@ -46,9 +47,15 @@
             margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
         }
 
-        .rectangle-left p {
+        .rectangle-left h2 {
             font-weight: bold; /* Torna o texto em negrito */
             font-size: 1.2rem; /* Ajusta o tamanho do texto */
+            margin: 0; /* Remove a margem do título */
+        }
+
+        .rectangle-left p {
+            font-size: 1rem; /* Ajusta o tamanho do parágrafo */
+            margin-top: 5px; /* Espaço entre o título e o texto */
         }
 
         /* Links à direita */
