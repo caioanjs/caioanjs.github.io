@@ -7,36 +7,34 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://i.imgur.com/hoU8Bfh.png" type="image/png">
     <style>
-        /* Cor dos links normais */
+        /* General Link Styles */
         a {
-            color: #6584b3; /* Azul */
-            text-decoration: none; /* Remove o sublinhado padrão */
+            color: #6584b3; /* Blue */
+            text-decoration: none; /* Remove underline */
         }
-
         a:hover {
-            color: #2960b3; /* Azul escuro */
+            color: #2960b3; /* Dark Blue */
         }
 
+        /* Top Bar Styles */
         .top-bar {
             background-color: #333;
             padding: 20px;
             text-align: center;
-            color: #FFFFFF;
+            color: white;
         }
-
         .top-link {
-            color: #FFFFFF;
+            color: white;
             cursor: pointer;
             padding: 10px 15px;
             font-size: 1.2rem;
         }
-
         .top-link:hover {
             background-color: rgba(101, 132, 179, 0.2);
             border-radius: 5px;
         }
 
-        /* Fundo azul */
+        /* Body and Background */
         body {
             margin: 0;
             padding: 0;
@@ -44,36 +42,33 @@
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura */
+            min-height: 100vh; /* Ensures the content takes full height */
         }
 
-             /* Fundo azul */
-        .body {
-            background-color: #6584b3;
-
-        /* Centralização vertical e horizontal */
+        /* Main Content Area for Centering */
         main {
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-grow: 1; /* Faz o main ocupar o espaço disponível */
+            flex-grow: 1; /* Makes the main area expand */
             text-align: center;
         }
 
-        /* Retângulo centralizado */
+        /* Central Rectangle */
         .rectangle {
-            width: 300px; /* Largura do retângulo */
-            height: 150px; /* Altura do retângulo */
-            background-color: white; /* Cor de fundo do retângulo */
-            border-radius: 8px; /* Bordas arredondadas */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+            width: 300px;
+            height: 150px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #333; /* Cor do texto */
-            font-size: 1.2rem; /* Tamanho do texto */
+            color: #333;
+            font-size: 1.2rem;
         }
 
+        /* Footer Styles */
         footer {
             text-align: center;
             padding: 1rem;
@@ -85,14 +80,23 @@
 <body>
     <!-- Top Bar -->
     <div class="top-bar">
-        <span class="top-link" onclick="window.location.href='caioanjs.github.io'">Home</span>
+        <span class="top-link" onclick="window.location.href='https://caioanjs.github.io'">Home</span>
         <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
         <span class="top-link" onclick="window.location.href='sobre.html'">Sobre</span>
         <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
     </div>
-        <!-- Retângulo centralizado -->
+
+    <!-- Main Content -->
+    <main>
+        <!-- Centralized Rectangle -->
         <div class="rectangle">
             <p>Este é o retângulo centralizado!</p>
         </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" target="_blank">anjosMP3</a></p>
+    </footer>
 </body>
 </html>
