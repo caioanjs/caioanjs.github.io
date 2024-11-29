@@ -101,6 +101,7 @@ footer {
     height: 32px; /* Tamanho fixo de 32px para a altura */
     vertical-align: middle; /* Alinha a imagem com o texto */
     margin-right: 10px; /* Espaço entre a imagem e o texto */
+} /* Fim do comentário emote */
 
 /* Blue Section - Bottom part */
 .blue-section {
@@ -134,6 +135,7 @@ footer {
 .blue-section .action-button:hover {
     background-color: #e74c3c; /* Button hover color */
 }
+
 /* Responsiveness for Small Screens */
 @media (max-width: 600px) {
     header h1 {
