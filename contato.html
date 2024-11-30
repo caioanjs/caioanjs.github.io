@@ -7,110 +7,112 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://f.feridinha.com/FfsPe.png" type="image/png">
     <style>
-/* Cor dos links */
-a {
-    color: #6584b3;
-    text-decoration: none;
-}
+        /* Cor dos links */
+        a {
+            color: #6584b3;
+            text-decoration: none;
+        }
 
-/* Hover nos links */
-a:hover {
-    color: #2960b3;
-}
+        /* Hover nos links */
+        a:hover {
+            color: #2960b3;
+        }
 
-/* Links visitados */
-a:visited {
-    color: #1d4d96;
-}
+        /* Links visitados */
+        a:visited {
+            color: #1d4d96;
+        }
 
-/* Barra superior */
-.top-bar {
-    background-color: #333;
-    padding: 20px;
-    text-align: center;
-    color: #fff;
-}
+        /* Barra superior */
+        .top-bar {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: center; /* Centraliza os links */
+            gap: 20px; /* Espaço entre os links */
+        }
 
-.top-link {
-    color: #fff;
-    cursor: pointer;
-    padding: 10px 15px;
-    font-size: 1.2rem;
-    display: inline-block;
-}
+        .top-link {
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            display: inline-block;
+        }
 
-.top-link:hover {
-    background-color: rgba(101, 132, 179, 0.2);
-    border-radius: 5px;
-}
+        .top-link:hover {
+            background-color: rgba(101, 132, 179, 0.2);
+            border-radius: 5px;
+        }
 
-/* Corpo principal */
-body {
-    display: flex; /* Usando flexbox no corpo */
-    flex-direction: column; /* Organiza os itens na vertical */
-    min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da tela */
-    margin: 0;
-}
+        /* Corpo principal */
+        body {
+            display: flex; /* Usando flexbox no corpo */
+            flex-direction: column; /* Organiza os itens na vertical */
+            min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da tela */
+            margin: 0;
+        }
 
-main {
-    padding: 20px;
-    flex-grow: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
-}
+        main {
+            padding: 20px;
+            flex-grow: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
+        }
 
-.command {
-    margin: 10px 0;
-}
+        .command {
+            margin: 10px 0;
+        }
 
-.command-name {
-    font-weight: bold;
-}
+        .command-name {
+            font-weight: bold;
+        }
 
-/* Seção azul */
-.blue-section {
-    background-color: #6584b3;
-    color: #fff;
-    padding: 30px;
-    text-align: center;
-    margin-top: 50px;
-}
+        /* Seção azul */
+        .blue-section {
+            background-color: #6584b3;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
 
-.blue-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
+        .blue-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
 
-.blue-section p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
+        .blue-section p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
 
-.blue-section .action-button {
-    background-color: #203a61;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-}
+        .blue-section .action-button {
+            background-color: #203a61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
 
-.blue-section .action-button:hover {
-    background-color: #3b5b8a;
-}
+        .blue-section .action-button:hover {
+            background-color: #3b5b8a;
+        }
 
-/* eu */
-.anjosmp3 {
-    color: #828ebc !important;
-}
+        /* eu */
+        .anjosmp3 {
+            color: #828ebc !important;
+        }
 
-/* Estilo do footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 1rem;
-}
+        /* Estilo do footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
 
     </style>
 </head>
@@ -132,7 +134,7 @@ footer {
         <section>
             <h2><img src="https://cdn.7tv.app/emote/01H6K97AZR000DB8T06388X6E1/4x.webp" class="emote" alt="Emoji"> Modos de contato</h2>
             <div class="command">
-                <span class="command-name">Contatar o Dono</a>)</b>
+                <span class="command-name">Contatar o Dono</span>
                 <p class="command-desc">Mande um sussurro no meu canal da twitch: <a href="https://www.twitch.tv/anjosMP3" target="_blank">anjosMP3</a> </p>
             </div>
             <div class="command">
@@ -141,6 +143,7 @@ footer {
             </div>
         </section>
     </main>
+
     <footer>
         <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank">anjosMP3</a></p>
     </footer>
