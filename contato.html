@@ -3,142 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - AtmosferaBot</title>
+    <title>Comandos - AtmosferaBot</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://f.feridinha.com/FfsPe.png" type="image/png">
     <style>
-        /* Estilos Gerais */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        /* Top Bar */
-        .top-bar {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .top-link {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        .top-link:hover {
-            background-color: rgba(101, 132, 179, 0.2);
-        }
-
-        /* Corpo Principal */
-        main {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            border-radius: 12px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #666;
-        }
-
+        /* Cor dos links */
         a {
             color: #6584b3;
             text-decoration: none;
         }
 
+        /* Hover nos links */
         a:hover {
             color: #2960b3;
         }
 
-        .contact-section {
-            margin-top: 20px;
-            text-align: left;
-            width: 100%;
-            max-width: 500px;
+        /* Links visitados */
+        a:visited {
+            color: #1d4d96;
         }
 
-        .contact-item {
-            margin-bottom: 15px;
+        /* Barra superior */
+        .top-bar {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: center; /* Centraliza os links */
+            gap: 20px; /* Espaço entre os links */
         }
 
-        .contact-title {
+        .top-link {
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            display: inline-block;
+        }
+
+        .top-link:hover {
+            background-color: rgba(101, 132, 179, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Corpo principal */
+        body {
+            display: flex; /* Usando flexbox no corpo */
+            flex-direction: column; /* Organiza os itens na vertical */
+            min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da tela */
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+            flex-grow: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
+        }
+
+        .command {
+            margin: 10px 0;
+        }
+
+        .command-name {
             font-weight: bold;
-            color: #333;
         }
 
+        /* Seção azul */
+        .blue-section {
+            background-color: #6584b3;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .blue-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blue-section p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .blue-section .action-button {
+            background-color: #203a61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .blue-section .action-button:hover {
+            background-color: #3b5b8a;
+        }
+
+        /* eu */
+        .anjosmp3 {
+            color: #828ebc !important;
+        }
+
+        /* Estilo do footer */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 15px;
-            font-size: 0.9rem;
+            padding: 20px;
+            font-size: 1rem;
         }
 
-        footer a {
-            color: #828ebc;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #ffffff;
-        }
     </style>
 </head>
 <body>
     <!-- Top Bar -->
     <div class="top-bar">
-        <a href="https://atmosferabot.vercel.app" class="top-link">Home</a>
-        <a href="comandos.html" class="top-link">Comandos</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0QfC6J9ZGWVriKLXSVFOGDqrWP_9SVqSA3totoxDQ84u0fg/viewform" class="top-link">Sugestão</a>
-        <a href="contato.html" class="top-link">Contato</a>
+        <span class="top-link" onclick="window.location.href='https://atmosferabot.vercel.app'">Home</span>
+        <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
+        <span class="top-link" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0QfC6J9ZGWVriKLXSVFOGDqrWP_9SVqSA3totoxDQ84u0fg/viewform'">Sugestão</span>
+        <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
     </div>
 
-    <!-- Main Section -->
-    <main>
-        <h1>Contato</h1>
-        <p>Entre em contato com o AtmosferaBot! Estamos prontos para ajudar você.</p>
+    <header>
+        <h1>AtmosferaBot</h1>
+        <p>Contato</p>
+    </header>
 
-        <div class="contact-section">
-            <div class="contact-item">
-                <span class="contact-title">Twitch:</span>
-                <p><a href="https://www.twitch.tv/anjosMP3" target="_blank">anjosMP3</a></p>
+    <main id="commandsContainer">
+        <section>
+            <h2><img src="https://cdn.7tv.app/emote/01H6K97AZR000DB8T06388X6E1/4x.webp" class="emote" alt="Emoji"> Modos de contato</h2>
+            <div class="command">
+                <span class="command-name">Contatar o Dono</span>
+                <p class="command-desc">Mande um sussurro no meu canal da twitch: <a href="https://www.twitch.tv/anjosMP3" target="_blank">anjosMP3</a> </p>
             </div>
-            <div class="contact-item">
-                <span class="contact-title">Email:</span>
-                <p><a href="mailto:atmosferabot@gmail.com" target="_blank">atmosferabot@gmail.com</a></p>
+            <div class="command">
+                <span class="command-name">Email:</span>
+                <p class="command-desc"><a href="mailto:atmosferabot@gmail.com" target="_blank">atmosferabot@gmail.com</a></p>
             </div>
-        </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" target="_blank">anjosMP3</a></p>
+        <p>© 2024 AtmosferaBot - Feito com muita felicidade e gratidão por <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank">anjosMP3</a></p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
