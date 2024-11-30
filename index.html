@@ -18,6 +18,33 @@
             min-height: 100vh;
         }
 
+        /* Animação de fade-in */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animação de hover nos links */
+        @keyframes hoverEffect {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
         /* Contêiner principal */
         .container {
             display: flex;
@@ -38,6 +65,7 @@
             justify-content: center; /* Centraliza verticalmente */
             align-items: center; /* Centraliza horizontalmente */
             padding: 20px; /* Adiciona padding para afastar a imagem das bordas */
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
 
         .atmosfera {
@@ -50,12 +78,14 @@
             font-weight: bold; /* Torna o texto em negrito */
             font-size: 1.2rem; /* Ajusta o tamanho do texto */
             margin: 0; /* Remove a margem do título */
+            animation: fadeIn 2s ease-in-out forwards;
         }
 
         .rectangle-left p {
             font-size: 1rem; /* Ajusta o tamanho do parágrafo */
             margin-top: 5px; /* Espaço entre o título e o texto */
             text-align: center; /* Centraliza o texto */
+            animation: fadeIn 2.5s ease-in-out forwards;
         }
 
         /* Links à direita */
@@ -78,18 +108,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         .link-item:hover {
             background-color: #3b5b8a;
+            transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Quadrado à esquerda -->
-        <div class="rectangle-left">
+        <div class="rectangle-left fade-in">
             <a href="https://twitch.tv/atmosferabot" target="_blank">
                 <img src="https://f.feridinha.com/FfsPe.png" class="atmosfera" alt="AtmosferaBot">
             </a>
@@ -98,7 +129,7 @@
         </div>
 
         <!-- Links à direita -->
-        <div class="links-container">
+        <div class="links-container fade-in">
             <a href="comandos.html" class="link-item">Comandos</a>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0QfC6J9ZGWVriKLXSVFOGDqrWP_9SVqSA3totoxDQ84u0fg/viewform" class="link-item">Sugestão</a>
             <a href="contato.html" class="link-item">Contato</a>
