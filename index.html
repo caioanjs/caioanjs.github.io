@@ -29,7 +29,7 @@
         /* Quadrado à esquerda */
         .rectangle-left {
             width: 250px; /* Ajusta o tamanho da div */
-            height: 250px; /* Ajusta a altura da div */
+            height: auto; /* Ajusta dinamicamente a altura */
             background-color: white;
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
@@ -38,12 +38,11 @@
             justify-content: center; /* Centraliza verticalmente */
             align-items: center; /* Centraliza horizontalmente */
             padding: 20px; /* Adiciona padding para afastar a imagem das bordas */
-            position: relative; /* Torna a div relativa, se necessário */
         }
 
         .atmosfera {
-            width: 80%; /* A imagem vai ocupar 80% da largura da div */
-            height: auto; /* A altura será proporcional */
+            max-width: 100%; /* A imagem não excede a largura do contêiner */
+            height: auto; /* Mantém proporção */
             margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
         }
 
@@ -56,6 +55,7 @@
         .rectangle-left p {
             font-size: 1rem; /* Ajusta o tamanho do parágrafo */
             margin-top: 5px; /* Espaço entre o título e o texto */
+            text-align: center; /* Centraliza o texto */
         }
 
         /* Links à direita */
@@ -84,24 +84,18 @@
         .link-item:hover {
             background-color: #3b5b8a;
         }
-
-        .imagem {
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Quadrado à esquerda -->
-<div class="rectangle-left">
-    <a href="https://twitch.tv/atmosferabot" target="_blank" class="imagem">
-        <img src="https://f.feridinha.com/FfsPe.png" class="atmosfera" alt="AtmosferaBot">
-    </a>
-    <h2>AtmosferaBot</h2>
-    <p>Um bot bem legalzinho sabe</p>
-</div>
+        <div class="rectangle-left">
+            <a href="https://twitch.tv/atmosferabot" target="_blank">
+                <img src="https://f.feridinha.com/FfsPe.png" class="atmosfera" alt="AtmosferaBot">
+            </a>
+            <h2>AtmosferaBot</h2>
+            <p>Um bot bem legalzinho sabe</p>
+        </div>
 
         <!-- Links à direita -->
         <div class="links-container">
