@@ -146,55 +146,43 @@
     </main>
 
 <footer style="padding: 10px; font-size: 14px; background-color: #333; border-top: 1px solid #ddd; color: white;">
-    <div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
-        <!-- Texto "Desenvolvido por" -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
         <p style="margin: 0;">Desenvolvido por 
             <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank" style="color: #72a4f2;">anjosMP3</a>
         </p>
-        <!-- Botão Ko-fi -->
-        <div id="kofi-button" style="display: flex; align-items: center;"></div>
-        <!-- Contador de tempo -->
         <p id="uptime" style="margin: 0;">Carregando tempo de funcionamento...</p>
-    </div>
-    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-    <script>
-        // Inicialização do botão Ko-fi
-        kofiwidget2.init('Me apoie no Ko-fi', '#333', 'Z8Z516S9X0');
-        kofiwidget2.draw();
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+        <script type='text/javascript'>
+            kofiwidget2.init('Me apoie no Ko-fi', '#333', 'Z8Z516S9X0');
+            kofiwidget2.draw();
+        </script>
+        <script>
+            // Data e hora de início do bot
+            const startTime = new Date('2024-11-27T09:26:00'); // Substitua pela data/hora real
 
-        // Remove sombra do botão Ko-fi
-        window.addEventListener('load', () => {
-            const kofiButton = document.querySelector('.kofiwidget2');
-            if (kofiButton) {
-                kofiButton.style.boxShadow = 'none'; // Remove a sombra
-                kofiButton.style.margin = '0';       // Remove margens extras
+            function updateUptime() {
+                const now = new Date();
+                const elapsed = now - startTime;
+
+                // Cálculo de dias, horas, minutos e segundos
+                const days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((elapsed / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((elapsed / (1000 * 60)) % 60);
+                const seconds = Math.floor((elapsed / 1000) % 60);
+
+                // Monta a string de tempo
+                const uptimeText = `${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
+
+                // Atualiza o texto no rodapé
+                document.getElementById('uptime').textContent = `O bot começou há: ${uptimeText}`;
             }
-        });
 
-        // Data e hora de início do bot
-        const startTime = new Date('2024-11-27T09:26:00');
-
-        function updateUptime() {
-            const now = new Date();
-            const elapsed = now - startTime;
-
-            // Cálculo de dias, horas, minutos e segundos
-            const days = Math.floor(elapsed / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((elapsed / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((elapsed / (1000 * 60)) % 60);
-            const seconds = Math.floor((elapsed / 1000) % 60);
-
-            // Atualiza o texto no rodapé
-            const uptimeText = `${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
-            document.getElementById('uptime').textContent = `Bot em funcionamento há: ${uptimeText}`;
-        }
-
-        // Atualiza o contador a cada segundo
-        setInterval(updateUptime, 1000);
-        updateUptime(); // Chamada inicial
-    </script>
+            // Atualiza o contador a cada segundo
+            setInterval(updateUptime, 1000);
+            updateUptime(); // Chamada inicial
+        </script>
+    </div>
 </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
