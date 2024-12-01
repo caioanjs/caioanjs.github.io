@@ -3,203 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comandos - AtmosferaBot</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AtmosferaBot</title>
     <link rel="icon" href="https://f.feridinha.com/FfsPe.png" type="image/png">
     <style>
-
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-        
-        /* Cor dos links */
-        a {
-            color: #6584b3;
-            text-decoration: none;
-        }
-
-        /* Hover nos links */
-        a:hover {
-            color: #2960b3;
-        }
-
-        /* Links visitados */
-        a:visited {
-            color: #1d4d96;
-        }
-
-        /* Barra superior */
-        .top-bar {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
-        }
-
-    .top-link {
-        color: #fff;
-        cursor: pointer;
-        padding: 10px 15px;
-        font-size: 1.2rem;
-        display: inline-block;
-        border-radius: 5px; /* Bordas arredondadas por padrão */
-        transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .top-link:hover {
-        background-color: rgba(101, 132, 179, 0.2);
-        border-radius: 5px;
-        transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
-    }
-
-        /* Corpo principal */
-        main {
-            padding: 20px;
-        }
-
-        .command {
-            margin: 10px 0;
-        }
-
-        .command-name {
-            font-weight: bold;
-        }
-
-        /* Seção azul */
-        .blue-section {
+        /* Configurações gerais */
+        body {
+            margin: 0;
+            padding: 0;
             background-color: #6584b3;
-            color: #fff;
-            padding: 30px;
-            text-align: center;
-            margin-top: 50px;
+            font-family: Outfit, sans-serif;
+            display: flex;
+            justify-content: center; /* Centraliza na horizontal */
+            align-items: center; /* Centraliza na vertical */
+            min-height: 100vh;
         }
 
-        .blue-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
+        /* Animação de fade-in */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards; /* Mesma duração para todos */
         }
 
-        .blue-section p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        .blue-section .action-button {
+        /* Contêiner principal */
+        .container {
+            display: flex;
+            justify-content: center; /* Centraliza os filhos na horizontal */
+            align-items: center; /* Centraliza os filhos na vertical */
+            gap: 50px; /* Espaço entre os elementos (quadrado e links) */
+        }
+
+        /* Quadrado à esquerda */
+        .rectangle-left {
+            width: 250px; /* Ajusta o tamanho da div */
+            height: auto; /* Ajusta dinamicamente a altura */
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            display: flex;
+            flex-direction: column; /* Alinha a imagem e o texto na vertical */
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
+            padding: 20px; /* Adiciona padding para afastar a imagem das bordas */
+        }
+
+        .atmosfera {
+            max-width: 100%; /* A imagem não excede a largura do contêiner */
+            height: auto; /* Mantém proporção */
+            margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+        }
+
+        .rectangle-left h2 {
+            font-weight: bold; /* Torna o texto em negrito */
+            font-size: 1.2rem; /* Ajusta o tamanho do texto */
+            margin: 0; /* Remove a margem do título */
+        }
+
+        .rectangle-left p {
+            font-size: 1rem; /* Ajusta o tamanho do parágrafo */
+            margin-top: 5px; /* Espaço entre o título e o texto */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        /* Links à direita */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .link-item {
             background-color: #203a61;
             color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
+            text-decoration: none;
+            padding: 15px 20px;
+            margin-bottom: 15px; /* Espaço entre os links */
+            border-radius: 12px; /* Bordas arredondadas */
+            text-align: center;
+            font-size: 1.2rem;
+            width: 200px; /* Largura fixa para os links */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .blue-section .action-button:hover {
+        .link-item:hover {
             background-color: #3b5b8a;
+            transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
         }
-
-        /* eu */
-        .anjosmp3 {
-    color: #828ebc !important;
-}
     </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <span class="top-link" onclick="window.location.href='https://atmosferabot.vercel.app'">Home</span>
-        <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
-        <span class="top-link" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0QfC6J9ZGWVriKLXSVFOGDqrWP_9SVqSA3totoxDQ84u0fg/viewform'">Sugestão</span>
-        <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
+    <div class="container fade-in">
+        <!-- Quadrado à esquerda -->
+        <div class="rectangle-left">
+            <a href="https://twitch.tv/atmosferabot" target="_blank">
+                <img src="https://f.feridinha.com/FfsPe.png" class="atmosfera" alt="AtmosferaBot">
+            </a>
+            <h2>AtmosferaBot</h2>
+            <p>Um bot bem legalzinho sabe</p>
+        </div>
+
+        <!-- Links à direita -->
+        <div class="links-container">
+            <a href="comandos.html" class="link-item">Comandos</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0QfC6J9ZGWVriKLXSVFOGDqrWP_9SVqSA3totoxDQ84u0fg/viewform" class="link-item">Sugestão</a>
+            <a href="contato.html" class="link-item">Contato</a>
+        </div>
     </div>
-
-    <header>
-        <h1>AtmosferaBot</h1>
-        <p>Todos os comandos do bot.</p>
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Busque um comando..."
-            oninput="filterCommands()"
-        />
-    </header>
-
-    <main id="commandsContainer">
-        <section>
-            <h2><img src="https://cdn.7tv.app/emote/01GS1DY2PR000EQ8WWYE0DETH6/4x.webp" class="emote" alt="Emoji"> Comandos padrões</h2>
-            <div class="command">
-                <span class="command-name">?join</span> <b>(SÓ FUNCIONA NO CANAL DO <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a>)</b>
-                <p class="command-desc">Faça o bot entrar no seu canal da Twitch!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?leave</span>
-                <p class="command-desc">Faça o bot sair do seu canal... (Lembre-se que pode mandar "?join" no canal do <a href="https://www.twitch.tv/atmosferabot" target="_blank">AtmosferaBot</a> para chamar o bot de volta!)</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?ajuda</span>
-                <p class="command-desc">Venha para esse site! (provavelmente você veio aqui depois de mandar o comando)</p>
-            </div>
-        </section>
-        <section>
-            <h2><img src="https://cdn.7tv.app/emote/01G7QVTDS0000AFZYKYR8SSBGX/4x.webp" class="emote" alt="Emoji"> Interativos com Viewers</h2>
-            <div class="command">
-                <span class="command-name">?oi</span>
-                <p class="command-desc">Receba um oi especial do Atmosfera!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?adivinharnick</span>
-                <p class="command-desc">Atmosfera irá adivinhar seu nickname da Twitch!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?ship [nome1] [nome2]</span>
-                <p class="command-desc">Veja a compatibilidade de duas pessoas em um ship!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?bobo [nome]</span>
-                <p class="command-desc">Veja o quão você ou outra pessoa é bobo!</p>
-            </div>
-        </section>
-        <section>
-            <h2><img src="https://cdn.7tv.app/emote/01FBZESCNR000A6AWCB1X558GZ/4x.webp" class="emote" alt="Emoji"> Comandos personalizados</h2>
-            <div class="command">
-                <span class="command-name">?addcomando [comando] [resposta]</span>
-                <p class="command-desc">Adicione um comando personalizado no seu canal!</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?removercomando [comando]</span>
-                <p class="command-desc">Remova um comando existente.</p>
-            </div>
-            <div class="command">
-                <span class="command-name">?comandos</span>
-                <p class="command-desc">Veja a lista de comandos do canal.</p>
-            </div>
-            <p id="noResults" style="display: none;">Nenhum comando encontrado.</p>
-        </section>
-    </main>
-
-    <!-- Seção com fundo azul -->
-    <div class="blue-section">
-        <h2>Tem uma ideia de comando?</h2>
-        <p>Se você tem uma ideia de comando e acha que seria legal implementarmos no AtmosferaBOT, mande no formulário abaixo!</p>
-        <button class="action-button" onclick="window.open('https://forms.gle/mfRsFWSPCM8voJMD7', '_blank')">Clique Aqui</button>
-    </div>
-
-<footer style="padding: 10px; font-size: 14px; background-color: #333;">
-    <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-        <p style="margin: 0; padding: 0;">© 2024 AtmosferaBot - Feito por 
-            <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank">anjosMP3</a>
-        </p>
-        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-        <script type='text/javascript'>
-            kofiwidget2.init('Nos apoie no Ko-fi', '#333', 'Z8Z516S9X0');
-            kofiwidget2.draw();
-        </script>
-        <style>
-            /* Remover sombra do botão do Ko-fi */
-            .kofi-button {
-                box-shadow: none !important;
-            }
-        </style>
-    </div>
-</footer>
-    <script src="script.js"></script>
 </body>
 </html>
