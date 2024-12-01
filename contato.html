@@ -146,13 +146,13 @@
     </main>
 
 <footer style="padding: 10px; font-size: 14px; background-color: #333; border-top: 1px solid #ddd; color: white;">
-    <div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 30px; width: 100%;">
         <!-- Texto "Desenvolvido por" -->
         <p style="margin: 0; order: 1;">Desenvolvido por 
             <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank" style="color: #72a4f2;">anjosMP3</a>
         </p>
         <!-- Botão Ko-fi -->
-        <div id="kofi-button" style="display: flex; align-items: center; order: 2;"></div>
+        <div id="kofi-button" style="display: flex; align-items: center; justify-content: center; order: 2;"></div>
         <!-- Contador de tempo -->
         <p id="uptime" style="margin: 0; order: 3;">Carregando tempo de funcionamento...</p>
     </div>
@@ -168,6 +168,7 @@
             if (kofiButton) {
                 kofiButton.style.boxShadow = 'none'; // Remove a sombra
                 kofiButton.style.margin = '0';       // Remove margens extras
+                kofiButton.style.display = 'inline-block'; // Garante que o botão não vá para baixo
             }
         });
 
@@ -194,6 +195,7 @@
         updateUptime(); // Chamada inicial
     </script>
 </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
