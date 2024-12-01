@@ -25,13 +25,12 @@
 
         /* Barra superior */
         .top-bar {
-            background-color: #222;  /* Barra superior mais escura */
             padding: 20px;
             text-align: center;
-            color: #fff;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: background-color 0.3s ease;
         }
 
         .top-link {
@@ -77,6 +76,7 @@
         main {
             padding: 20px;
             flex-grow: 1;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .command {
@@ -93,15 +93,37 @@
             color: #333;
         }
 
-        /* Tema escuro */
-        .dark-theme {
-            background-color: #121212;  /* Fundo mais escuro */
-            color: #e0e0e0;  /* Texto mais claro para contraste */
+        .light-theme .top-bar {
+            background-color: #333; /* Barra superior em cinza escuro */
         }
 
-        /* Seção azul */
-        .blue-section {
+        .light-theme .blue-section {
+            background-color: #6584b3;
+        }
+
+        .light-theme footer {
+            background-color: #333;
+        }
+
+        /* Tema escuro */
+        .dark-theme {
+            background-color: #121212; /* Fundo mais escuro */
+            color: #e0e0e0; /* Texto mais claro para contraste */
+        }
+
+        .dark-theme .top-bar {
+            background-color: #222; /* Barra superior mais escura */
+        }
+
+        .dark-theme .blue-section {
             background-color: #4a6a9d; /* Azul mais escuro */
+        }
+
+        .dark-theme footer {
+            background-color: #222; /* Footer mais escuro */
+        }
+
+        .blue-section {
             color: #fff;
             padding: 30px;
             text-align: center;
@@ -119,7 +141,7 @@
         }
 
         .blue-section .action-button {
-            background-color: #2e4a6d;  /* Cor mais escura para os botões */
+            background-color: #2e4a6d;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -132,9 +154,7 @@
             background-color: #3b5b8a; /* Hover mais suave */
         }
 
-        /* Estilo do footer */
         footer {
-            background-color: #222;  /* Cor mais escura para o footer */
             color: white;
             text-align: center;
             padding: 20px;
