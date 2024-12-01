@@ -25,58 +25,39 @@
 
         /* Barra superior */
         .top-bar {
+            background-color: #333;
             padding: 20px;
             text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .top-link {
             color: #fff;
-            cursor: pointer;
-            padding: 10px 15px;
-            font-size: 1.2rem;
-            display: inline-block;
-            border-radius: 5px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .top-link:hover {
-            background-color: rgba(101, 132, 179, 0.3); /* Aumentando a opacidade no hover */
-            border-radius: 5px;
-            transform: scale(1.1);
-        }
+    .top-link {
+        color: #fff;
+        cursor: pointer;
+        padding: 10px 15px;
+        font-size: 1.2rem;
+        display: inline-block;
+        border-radius: 5px; /* Bordas arredondadas por padrão */
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
 
-        /* Botão de troca de tema */
-        .theme-toggle {
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: #fff;
-            background: none;
-            border: none;
-            padding: 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.1);
-        }
+    .top-link:hover {
+        background-color: rgba(101, 132, 179, 0.2);
+        border-radius: 5px;
+        transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+    }
 
         /* Corpo principal */
         body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            display: flex; /* Usando flexbox no corpo */
+            flex-direction: column; /* Organiza os itens na vertical */
+            min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da tela */
             margin: 0;
-            transition: background-color 0.3s, color 0.3s;
         }
 
         main {
             padding: 20px;
-            flex-grow: 1;
-            transition: background-color 0.3s, color 0.3s;
+            flex-grow: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
         }
 
         .command {
@@ -87,43 +68,9 @@
             font-weight: bold;
         }
 
-        /* Tema claro */
-        .light-theme {
-            background-color: #fff;
-            color: #333;
-        }
-
-        .light-theme .top-bar {
-            background-color: #333; /* Barra superior em cinza escuro */
-        }
-
-        .light-theme .blue-section {
-            background-color: #6584b3;
-        }
-
-        .light-theme footer {
-            background-color: #333;
-        }
-
-        /* Tema escuro */
-        .dark-theme {
-            background-color: #121212; /* Fundo mais escuro */
-            color: #f0f0f0; /* Texto mais claro para contraste */
-        }
-
-        .dark-theme .top-bar {
-            background-color: #202020; /* Barra superior mais escura */
-        }
-
-        .dark-theme .blue-section {
-            background-color: #2d528b; /* Azul mais escuro */
-        }
-
-        .dark-theme footer {
-            background-color: #202020; /* Footer mais escuro */
-        }
-
+        /* Seção azul */
         .blue-section {
+            background-color: #6584b3;
             color: #fff;
             padding: 30px;
             text-align: center;
@@ -141,7 +88,7 @@
         }
 
         .blue-section .action-button {
-            background-color: #2e4a6d;
+            background-color: #203a61;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -151,27 +98,32 @@
         }
 
         .blue-section .action-button:hover {
-            background-color: #3b5b8a; /* Hover mais suave */
+            background-color: #3b5b8a;
         }
 
+        /* eu */
+        .anjosmp3 {
+            color: #828ebc !important;
+        }
+
+        /* Estilo do footer */
         footer {
+            background-color: #333;
             color: white;
             text-align: center;
             padding: 20px;
             font-size: 1rem;
         }
+
     </style>
 </head>
-<body class="light-theme">
+<body>
     <!-- Top Bar -->
     <div class="top-bar">
-        <div>
-            <span class="top-link" onclick="window.location.href='https://atmosferabot.vercel.app'">Home</span>
-            <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
-            <span class="top-link" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0QfC6J9ZGWVriKLXSVFOGDqrWP_9SVqSA3totoxDQ84u0fg/viewform'">Sugestão</span>
-            <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
-        </div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        <span class="top-link" onclick="window.location.href='https://atmosferabot.vercel.app'">Home</span>
+        <span class="top-link" onclick="window.location.href='comandos.html'">Comandos</span>
+        <span class="top-link" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSd0QfC6J9ZGWVriKLXSVFOGDqrWP_9SVqSA3totoxDQ84u0fg/viewform'">Sugestão</span>
+        <span class="top-link" onclick="window.location.href='contato.html'">Contato</span>
     </div>
 
     <header>
@@ -193,32 +145,26 @@
         </section>
     </main>
 
-    <footer>
-        <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
-            <p style="margin: 0; padding: 0;">© 2024 AtmosferaBot - Feito por 
-                <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank">anjosMP3</a>
-            </p>
-            <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-            <script type='text/javascript'>
-                kofiwidget2.init('Nos apoie no Ko-fi', '#333', 'Z8Z516S9X0');
-                kofiwidget2.draw();
-            </script>
-        </div>
-    </footer>
-
-    <script>
-        function toggleTheme() {
-            const body = document.body;
-            const button = document.querySelector('.theme-toggle');
-            body.classList.toggle('dark-theme');
-            body.classList.toggle('light-theme');
-            // Trocar ícone do botão
-            if (body.classList.contains('dark-theme')) {
-                button.textContent = '🌙'; // Lua para tema escuro
-            } else {
-                button.textContent = '☀️'; // Sol para tema claro
+<footer style="padding: 10px; font-size: 14px; background-color: #333; border-top: 1px solid #ddd;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
+        <p style="margin: 0; padding: 0;">© 2024 AtmosferaBot - Feito por 
+            <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank">anjosMP3</a>
+        </p>
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+        <script type='text/javascript'>
+            kofiwidget2.init('Nos apoie no Ko-fi', '#333', 'Z8Z516S9X0');
+            kofiwidget2.draw();
+        </script>
+        <style>
+            /* Remover sombra do botão do Ko-fi */
+            .kofi-button {
+                box-shadow: none !important;
             }
-        }
-    </script>
+        </style>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
