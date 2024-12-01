@@ -146,7 +146,7 @@
     </main>
 
 <footer style="padding: 10px; font-size: 14px; background-color: #333; border-top: 1px solid #ddd; color: white;">
-    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 15px;">
         <p style="margin: 0;">Desenvolvido por 
             <a href="https://www.twitch.tv/anjosMP3" class="anjosmp3" target="_blank" style="color: #72a4f2;">anjosMP3</a>
         </p>
@@ -171,10 +171,10 @@
                 const seconds = Math.floor((elapsed / 1000) % 60);
 
                 // Monta a string de tempo
-                const uptimeText = `${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+                const uptimeText = `${days}d, ${hours}h, ${minutes}m, ${seconds}s`;
 
                 // Atualiza o texto no rodapé
-                document.getElementById('uptime').textContent = `Bot em funcionamento há: ${uptimeText}`;
+                document.getElementById('uptime').textContent = `O bot começou em: ${uptimeText}`;
             }
 
             // Atualiza o contador a cada segundo
@@ -183,6 +183,7 @@
         </script>
     </div>
 </footer>
+
 
 
     <script src="script.js"></script>
